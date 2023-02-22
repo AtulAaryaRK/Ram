@@ -20,7 +20,7 @@ def upload_form():
     return render_template('upload.html')
 
 
-@app.route('/', methods=['POST'])
+@app.route('/gray', methods=['POST'])
 
 def upload_image():
 
