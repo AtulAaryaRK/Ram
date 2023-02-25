@@ -38,13 +38,13 @@ def upload_image():
 
     image_rotation_degree.save(os.path.join('static/' , image.filename))
 
-    img_rotate = image.filename
-    
+    img_rotate = filename + '.jpg'
+
     return render_template('upload.html' , filename=img_rotate)
 
 @app.route('/display/<filename>')
 def display_image(filename):
-    return redirect(url_for('static', filename=filename))
+    return redirect(url_for('static/', filename=filename))
 
 
 if __name__ == "__main__":
