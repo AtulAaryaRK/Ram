@@ -36,10 +36,10 @@ def upload_image():
 
     image_rotation_degree = image.rotate(degree)
 
-    image_rotation_degree.save(os.path.join('static/' , 'rotated_image.jpg'))
+    image_rotation_degree.save(os.path.join('static/' , image.filename))
 
-    img_rotate = 'rotated_image.jpg'
-
+    img_rotate = image.filename
+    
     return render_template('upload.html' , filename=img_rotate)
 
 @app.route('/display/<filename>')
