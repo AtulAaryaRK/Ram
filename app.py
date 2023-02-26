@@ -42,10 +42,10 @@ def upload_image():
 
     return render_template('upload.html' , filename=img_rotate)
 
-@app.route('/display/<filename>')
+@app.route('/display_image/<filename>')
 def display_image(filename):
 
-    return redirect(url_for('static/', filename=filename))
+    return redirect(url_for('static', filename=filename))
 
 
 if __name__ == "__main__":
